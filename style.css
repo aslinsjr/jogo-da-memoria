@@ -17,6 +17,7 @@
     overflow: hidden;
     background: rgb(243,243,246);
     background: linear-gradient(156deg, rgba(243,243,246,1) 18%, rgba(182,237,247,1) 54%, rgba(64,116,182,1) 82%, rgba(75,35,154,1) 95%);
+    background-repeat: no-repeat;
   }
 
   h1,h2 {
@@ -108,10 +109,13 @@
   }
   
   @media screen and (max-width: 500px) {
-  
+    body {
+      height: 100vh;
+      overflow: hidden;
+    }
+
     .game {
       width: 400px;
-      height: 80vh;
       min-width: unset;
     }
 
