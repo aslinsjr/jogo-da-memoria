@@ -12,18 +12,21 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="blur"></div>
-  <header>
-    <h1>Jogo da Memória</h1>
+    <div class="blur active"></div>
+  <header class="wellcome-container">
+    <div class="title-and-logo">
+      <h2>Jogo da Memória</h2>
+      <span id="logo">🧠</span>
+    </div>
+    <button class="button" id="start-btn">Começar</button>
   </header>
-  <main class="game"></main>
+  <main class="game hide"></main>
   <div class="result-container hide">
     <h2>Você Ganhou!</h2>
-    <button id="reload-btn">Recomeçar</button>
+    <button class="button" id="reload-btn">Recomeçar</button>
   </div>
 </body>
 

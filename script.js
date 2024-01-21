@@ -1,7 +1,9 @@
 const reloadBtn = document.querySelector("#reload-btn");
 const gameContainer = document.querySelector(".game");
 const resultContiner = document.querySelector(".result-container");
+const wellcomeContainer = document.querySelector(".wellcome-container")
 const blur = document.querySelector(".blur");
+const startBtn = document.querySelector("#start-btn")
 
 const emojis = [
   "🛩️",
@@ -66,7 +68,11 @@ function checkMatch() {
   }
 }
 
-
+startBtn.addEventListener("click", () => {
+  wellcomeContainer.classList.add("hide")
+  gameContainer.classList.remove("hide")
+  blur.classList.remove("active")
+})
 
 reloadBtn.addEventListener("click", () => {
   window.location.reload()

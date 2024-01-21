@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     z-index: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Press Start 2P', system-ui;
   }
   
   body {
@@ -20,10 +20,59 @@
     background-repeat: no-repeat;
   }
 
-  h1,h2 {
-    color: #34343d;
+  /* Wellcome and Result Container */
+  .wellcome-container,
+  .result-container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background: rgb(243,243,246);
+    background: linear-gradient(156deg, rgba(243,243,246,1) 18%, rgba(182,237,247,1) 54%);
+    z-index: 1;
+    border-radius: 30px;
+    z-index: 2;
+    color: hsl(251.11,50.94%,20.78%);
+  }
+
+  .title-and-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    
+  }
+
+  h2 {
+    line-height: 140%;
+  }
+
+  #logo {
+    font-size: 3rem;
+    margin-left: -3rem;
+  }
+
+  .button {
+    padding: 1rem;
+    margin: 1rem;
     text-transform: uppercase;
-    font-weight: 700;
+    border-radius: 10px;
+    color: hsl(251.11,50.94%,20.78%);
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: hsla(251, 51%, 21%);
+    color: hsl(0,0%,94.12%);
+  }
+
+  .result-container h2 {
+    padding: 1rem;
+    text-align: center;
   }
   
   /* Game Container */
@@ -66,29 +115,6 @@
     transform: rotateY(180deg);
   }
   
-  /* Result Container */
-  .result-container {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 300px;
-    height: 300px;
-    background: rgb(243,243,246);
-    background: linear-gradient(156deg, rgba(243,243,246,1) 18%, rgba(182,237,247,1) 54%);
-    z-index: 1;
-    border-radius: 30px;
-    z-index: 2;
-  }
-
-  .result-container button {
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    border-radius: 10px;
-    color: #34343d;
-  }
-  
   .hide {
     display: none;
   }
@@ -118,7 +144,7 @@
       min-width: unset;
     }
 
-    .result-container {
+    .container {
       width: 350px;
     }
   
